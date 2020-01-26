@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from './components/home/navigation';
+import Container from 'react-bootstrap/Container';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Route, Switch, BrowserRouter} from 'react-router-dom';
@@ -19,7 +20,9 @@ function getCharCount(event) {
 function App() {
   return (
     <div className="App">
-      <Navigation />
+      <Container>
+        <Navigation />
+      </Container>
     </div>
   );
 }
