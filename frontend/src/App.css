@@ -1,7 +1,59 @@
-/* .App {
-  background-color: #f9f9f9;
-} */
+/*
+
+General Styles
+
+*/
+
+hr {
+  margin: 0;
+}
+
+thead {
+  font-weight: bold;
+}
+
+/*
+
+Navigation Component
+
+*/
 
 .logo {
   font-size: 32px;
+}
+
+
+/*
+
+Action Component
+
+*/
+
+.action_section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.action_button {
+  width: 190px;
+  padding: 25px;
+  background-color: white;
+  border: 1px solid grey;
+  color: #222;
+  font-size: 18px;
+}
+
+.action_button:hover {
+  background-color: #33658A;
+}
+
+/*
+
+Scheduling Component
+
+*/
+
+.upcoming_title {
+  margin-bottom: 20px;
+  color: #333;
 }

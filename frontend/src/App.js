@@ -1,5 +1,7 @@
 import React from 'react';
 import Navigation from './components/home/navigation';
+import Action from './components/home/action';
+import Scheduling from './components/home/scheduling';
 import Container from 'react-bootstrap/Container';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -22,6 +24,8 @@ function App() {
     <div className="App">
       <Container>
         <Navigation />
+        <Action />
+        <Scheduling />
       </Container>
     </div>
   );
