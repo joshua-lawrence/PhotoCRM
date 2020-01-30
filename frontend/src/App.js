@@ -1,11 +1,10 @@
 import React from 'react';
-import Navigation from './components/home/navigation';
-import Action from './components/home/action';
-import Scheduling from './components/home/scheduling';
+import Navigation from './components/navigation';
+import Home from './pages/home';
 import Container from 'react-bootstrap/Container';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Route, Switch, BrowserRouter} from 'react-router-dom';
+import {Route, Switch, BrowserRouter as Router} from 'react-router-dom';
 
 import './App.css';
 
@@ -19,16 +18,25 @@ function getCharCount(event) {
     .catch(err => console.log(err))
 }
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <Container>
-        <Navigation />
-        <Action />
-        <Scheduling />
-      </Container>
-    </div>
+    <Router>
+      <div>
+        <Container>
+          <Navigation />
+          <Switch>
+            <Route exact path="/">
+                <Home />
+            </Route>
+            <Route path="/customers">
+
+            </Route>
+            <Route path="/jobs">
+
+            </Route>
+          </Switch>
+        </Container>
+      </div>
+    </Router>
   );
 }
-
-export default App;

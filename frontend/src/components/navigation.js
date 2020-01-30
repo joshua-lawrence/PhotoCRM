@@ -7,12 +7,12 @@ class Navigation extends React.Component {
         return (
             <div>            
                 <Navbar>
-                    <Navbar.Brand className="logo">avenue</Navbar.Brand>
+                    <Navbar.Brand className="logo" href="/">avenue</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                         <Nav>
-                            <Nav.Item><Nav.Link>Customers</Nav.Link></Nav.Item>
-                            <Nav.Item><Nav.Link>Jobs</Nav.Link></Nav.Item>
+                            <Nav.Item><Nav.Link href="/customers">Customers</Nav.Link></Nav.Item>
+                            <Nav.Item><Nav.Link href="/jobs">Jobs</Nav.Link></Nav.Item>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
