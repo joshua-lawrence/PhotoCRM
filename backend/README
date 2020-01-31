@@ -3,11 +3,10 @@ After build and up
 docker-compose exec backend python manage.py migrate --noinput
 
 If you want to connect to Postgresql
-docker-compose exec db psql --username=postgres
+docker-compose exec db psql --username=hello_django --dbname=hello_django_dev
 
 type \l to see a list of databases
 \q to disconnect
-Im still working on getting the username and database configuration to work.
 
 http://localhost:8000/admin/ to see the django admin
 
