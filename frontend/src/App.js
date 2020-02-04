@@ -1,22 +1,15 @@
 import React from 'react';
-import Navigation from './components/navigation';
-import Home from './pages/home';
 import Container from 'react-bootstrap/Container';
-import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Route, Switch, BrowserRouter as Router} from 'react-router-dom';
 
+import Navigation from './components/navigation';
+
+import Home from './pages/home';
+import Customers from './pages/customers';
+import Jobs from './pages/jobs';
+
 import './App.css';
-
-function getCharCount(event) {
-  const text = document.querySelector('#char-input').value
-
-  axios
-    .get(`/char_count?text=${text}`).then(({data}) => {
-      document.querySelector('#char-count').textContent = `${data.count} characters!`
-    })
-    .catch(err => console.log(err))
-}
 
 export default function App() {
   return (
@@ -29,10 +22,10 @@ export default function App() {
                 <Home />
             </Route>
             <Route path="/customers">
-
+                <Customers />
             </Route>
             <Route path="/jobs">
-
+                <Jobs />
             </Route>
           </Switch>
         </Container>
